@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>SIGE</b>VET <small><span class="badge badge-warning">v1.1</span></small>',
+    'logo' => '<b>SIGE</b>VET <small><span class="badge badge-primary">v1.2</span></small>',
     'logo_img' => 'web/img/sgvt_logo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
