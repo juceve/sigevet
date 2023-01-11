@@ -1,0 +1,1 @@
+echo 192.168.31.227 sigevet.test >> C:\Windows\System32\driverstc\hosts
