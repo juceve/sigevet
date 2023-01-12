@@ -274,11 +274,11 @@ return [
             'url'         => 'anticonceptivos',
             'icon'        => 'fas fa-fw fa-vial',
         ],
-        [
-            'text'        => 'ENFERMEDADES',
-            'url'         => 'enfermedades',
-            'icon'        => 'fas fa-fw fa-biohazard',
-        ],
+        // [
+        //     'text'        => 'ENFERMEDADES',
+        //     'url'         => 'enfermedades',
+        //     'icon'        => 'fas fa-fw fa-biohazard',
+        // ],
         [
             'text'    => 'Parametros del sistema',
             'icon'    => 'fas fa-fw fa-sliders-h',

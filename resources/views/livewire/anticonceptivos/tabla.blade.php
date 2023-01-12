@@ -21,9 +21,9 @@
     </div>
 
     <div class="table-responsive">
-        <table class="table table-striped table-hover" id="">
+        <table class="table table-hover table-bordered" id="">
             <thead class="thead">
-                <tr>
+                <tr style="background-color: #417ca3" class="text-white">
                     <th>ID</th>
                     <th>PACIENTE</th>
                     <th>MEDICAMENTO</th>
@@ -34,11 +34,11 @@
             <tbody>
                 @foreach ($anticonceptivos as $anticonceptivo)
                 <tr>
-                    <td>{{ $anticonceptivo->id }}</td>
-                    <td>{{ $anticonceptivo->paciente }}</td>
-                    <td>{{ $anticonceptivo->medicamento }}</td>
-                    <td>{{ Str::substr($anticonceptivo->created_at, 0, 10) }}</td>
-                    <td align="right">
+                    <td class="table-secondary">{{ $anticonceptivo->id }}</td>
+                    <td class="table-success">{{ $anticonceptivo->paciente }}</td>
+                    <td class="table-warning">{{ $anticonceptivo->medicamento }}</td>
+                    <td class="table-info">{{ Str::substr($anticonceptivo->created_at, 0, 10) }}</td>
+                    <td style="width: 260px;" align="right">
                         <form action="{{ route('anticonceptivos.destroy',$anticonceptivo->id) }}" method="POST"
                             class="eliminar">
                             <a class="btn btn-sm btn-primary "

@@ -22,7 +22,7 @@
     <div class="table-responsive">
         <table class="table table-bordered table-hover" id="">
             <thead class="thead">
-                <tr>
+                <tr style="background-color: #417ca3" class="text-white">
                     <th>No</th>                                        
                     <th>Nombre</th>										
                     <th>Raza</th>                                        
@@ -36,14 +36,14 @@
                
                 @foreach ($pacientes as $paciente)
                     <tr>
-                        <td>{{ $paciente->id }}</td>
+                        <td class="table-secondary">{{ $paciente->id }}</td>
                         
-                        <td>{{ $paciente->nombre }}</td>
+                        <td class="table-success">{{ $paciente->nombre }}</td>
                         
-                        <td>{{ $paciente->raza }}</td>
+                        <td class="table-info">{{ $paciente->raza }}</td>
                         
-                        <td>{{ $paciente->sexo }}</td>
-                        <td><a href="../clientes/{{$paciente->clienteid}}">{{$paciente->cliente}}</a> </td>
+                        <td class="table-warning">{{ $paciente->sexo }}</td>
+                        <td class="table-primary"><a href="../clientes/{{$paciente->clienteid}}">{{$paciente->cliente}}</a> </td>
 
                         <td class="text-right" width="220">
                             <form action="{{ route('pacientes.destroy',$paciente->id) }}" method="POST">

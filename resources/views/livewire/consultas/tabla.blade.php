@@ -22,7 +22,7 @@
     <div class="table-responsive">
         <table class="table table-hover table-bordered" id="">
             <thead class="thead">
-                <tr>
+                <tr style="background-color: #417ca3" class="text-white">
                     <th>Nro.</th>
                     <th>Paciente</th>
                     <th>Propietario</th>
@@ -35,15 +35,15 @@
                 @if ($consultas->count() > 0)
                 @foreach ($consultas as $consulta)
                     <tr>
-                        <td>{{ $consulta->id }}</td>
-                        <td>{{ $consulta->paciente }}</td>
-                        <td><a href="../clientes/{{$consulta->cliente_id}}" title="Ver Cliente">{{$consulta->cliente}}</a></td>
-                        <td>{{ substr($consulta->dateConsulta,0,10) }}</td>
+                        <td class="table-secondary">{{ $consulta->id }}</td>
+                        <td class="table-success">{{ $consulta->paciente }}</td>
+                        <td class="table-primary"><a href="../clientes/{{$consulta->cliente_id}}" title="Ver Cliente">{{$consulta->cliente}}</a></td>
+                        <td class="table-warning">{{ substr($consulta->dateConsulta,0,10) }}</td>
                         
-                        <td>{{ substr($consulta->fecreconsulta,0,10) }}</td>
+                        <td class="table-danger">{{ substr($consulta->fecreconsulta,0,10) }}</td>
                         
 
-                        <td class="text-center">
+                        <td class="text-right" style="width: 150px;">
                             <form action="{{ route('consultas.destroy',$consulta->id) }}" method="POST" class="eliminar-consulta">
                                 <a class="btn btn-sm btn-primary " href="{{ route('consultas.show',$consulta->id) }}"><i class="fa fa-fw fa-eye"></i></a>
                                 <a class="btn btn-sm btn-success" href="{{ route('consultas.edit',$consulta->id) }}"><i class="fa fa-fw fa-edit"></i></a>

@@ -1,3 +1,4 @@
+
 .loading {
     position: fixed;
     top: 0;
@@ -28,3 +29,23 @@
     transform: rotate(360deg);
   }
 }  
+
+
+.iVerde{
+  background-color: #eef8ee;
+  
+}
+
+.iAzul{
+  background-color: #e7f2f7;
+}
+.iMorado{
+  background-color: #f2e8fc;
+}
+.iAmarillo{
+  background-color: #fff9df;
+}
+
+.iRojo{
+  background-color: #fde5e5;
+}
