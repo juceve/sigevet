@@ -22,7 +22,7 @@
     <div class="table-responsive">
         <table class="table table-hover table-bordered" id="">
             <thead class="thead">
-                <tr style="background-color: #417ca3" class="text-white">
+                <tr style="background-color: #417ca3" class="text-white" align="center">
                     <th>Nro.</th>
                     <th>Paciente</th>
                     <th>Propietario</th>
@@ -35,12 +35,12 @@
                 @if ($consultas->count() > 0)
                 @foreach ($consultas as $consulta)
                     <tr>
-                        <td class="table-secondary">{{ $consulta->id }}</td>
-                        <td class="table-success">{{ $consulta->paciente }}</td>
-                        <td class="table-primary"><a href="../clientes/{{$consulta->cliente_id}}" title="Ver Cliente">{{$consulta->cliente}}</a></td>
-                        <td class="table-warning">{{ substr($consulta->dateConsulta,0,10) }}</td>
+                        <td style="background-color: #fad157" align="center"><strong>{{ $consulta->id }}</strong></td>
+                        <td class="iVerde"><strong>{{ $consulta->paciente }}</strong></td>
+                        <td class="table-primary"><a href="../clientes/{{$consulta->cliente_id}}" title="Ver Cliente"><strong>{{$consulta->cliente}}</strong></a></td>
+                        <td class="table-warning"><strong>{{ substr($consulta->dateConsulta,0,10) }}</strong></td>
                         
-                        <td class="table-danger">{{ substr($consulta->fecreconsulta,0,10) }}</td>
+                        <td class="table-danger"><strong>{{ substr($consulta->fecreconsulta,0,10) }}</strong></td>
                         
 
                         <td class="text-right" style="width: 150px;">

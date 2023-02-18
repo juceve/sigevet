@@ -22,7 +22,7 @@
     <div class="table-responsive">
         <table class="table table-bordered table-hover" id="">
             <thead class="thead">
-                <tr style="background-color: #417ca3" class="text-white">
+                <tr style="background-color: #417ca3" class="text-white" align="center">
                     <th style="width: 50px">ID</th>
                     <th>NOMBRE</th>
                     <th>TELEFONO</th>
@@ -32,9 +32,9 @@
             <tbody>
                 @foreach ($clientes as $cliente)
                 <tr>
-                    <td class="table-secondary">{{ $cliente->id }}</td>
-                    <td class="table-primary">{{ $cliente->nombre }}</td>
-                    <td class="table-info">{{ $cliente->telefono }}</td>
+                    <td style="background-color: #fad157" align="center"><strong>{{ $cliente->id }}</strong></td>
+                    <td class="table-primary"><strong>{{ $cliente->nombre }}</strong></td>
+                    <td class="table-info"><strong>{{ $cliente->telefono }}</strong></td>
 
                     <td class="text-center">
                         <a class="btn btn-sm btn-primary " href="{{ route('clientes.show',$cliente->id) }}"><i

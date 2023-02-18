@@ -22,7 +22,7 @@
     <div class="table-responsive">
         <table class="table table-striped table-hover" id="">
             <thead class="thead">
-                <tr style="background-color: #417ca3" class="text-white">
+                <tr style="background-color: #417ca3" class="text-white" align="center">
                     <th>ID</th>
                     <th>PACIENTE</th>
                     <th>MEDICAMENTO</th>
@@ -34,10 +34,10 @@
             <tbody>
                 @foreach ($vacunas as $vacuna)
                     <tr>
-                        <td class="table-secondary">{{ $vacuna->id }}</td>
-                        <td class="table-success">{{ $vacuna->paciente }}</td>
-                        <td class="table-warning">{{ $vacuna->medicamento }}</td>
-                        <td class="table-info">{{ Str::substr($vacuna->created_at, 0, 10) }}</td>
+                        <td style="background-color: #fad157" align="center"><strong>{{ $vacuna->id }}</strong></td>
+                        <td class="iVerde"><strong>{{ $vacuna->paciente }}</strong></td>
+                        <td class="table-warning"><strong>{{ $vacuna->medicamento }}</strong></td>
+                        <td class="table-info"><strong>{{ Str::substr($vacuna->created_at, 0, 10) }}</strong></td>
 
                         <td align="right" width="260">
                             <form action="{{ route('vacunas.destroy',$vacuna->id) }}" method="POST" class="eliminar-vacuna">
